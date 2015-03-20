@@ -5,7 +5,7 @@ This project is for the development ability test of Myriad Mobile. All contents 
 
 It currently supports iOS 8.2, please test it on a iOS 8.2 device or platform.
 
-For iOS deviec, only iPhone 4s/5/5s/6/6 plus are supported, iPad 2/Air/Retina are also supported, but the resolution may change.
+For iOS device, only iPhone 4s/5/5s/6/6 plus are supported, iPad 2/Air/Retina are also supported, but the resolution may change.
 
 In order to run this app correctly, please make sure you have an Internet access.
 
