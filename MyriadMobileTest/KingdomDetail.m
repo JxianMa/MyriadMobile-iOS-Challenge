@@ -48,6 +48,7 @@ static NSString *baseURL = @"https://challenge2015.myriadapps.com/api/v1/kingdom
     return self;
 }
 
+// Convert fetched URL stirng in JSON to NSURL
 - (NSURL *)kingdomImgURL {
     return [NSURL URLWithString:self.kingdomImgURLString];
 }
@@ -55,13 +56,6 @@ static NSString *baseURL = @"https://challenge2015.myriadapps.com/api/v1/kingdom
 - (NSURL *)questImgURL {
     return [NSURL URLWithString:self.questImgURLString];
 }
-
-/*
-- (NSURL *)questGiverImgURL {
-    return [NSURL URLWithString:self.questGiverImgURLString];
-}
-*/
-
 
 + (void)getKingdomDetailWithBlock: (void (^)(NSArray *responseArray, NSError *error))block ofKingdomId:(NSUInteger)kingdomId
 {

@@ -13,7 +13,7 @@
 #define Rgb2UIColor(r, g, b, a)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:(a)]
 @implementation KingdomListTableViewCell
 
-
+// Set kingdom information for each cell, data are from KingdomInfo model
 - (void)setKingdomInfo:(KingdomInfo *)kingdomInfo
 {
     _kingdomInfo = kingdomInfo;
@@ -23,7 +23,7 @@
     [self setNeedsLayout];
 }
 
-
+// Customize the style of each cell, I set a detail textlabel to store the kingdom id in order to pass the id to detail model more easily, but this detail textlabel is hidden in cell
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
@@ -37,6 +37,7 @@
     return self;
 }
 
+// Custmoize the size and position of imageView and textLabel
 - (void)layoutSubviews {
     [super layoutSubviews];
     self.imageView.frame = CGRectMake(5.0f, 5.0f, 60.0f, 60.0f);

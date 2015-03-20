@@ -20,6 +20,8 @@
 
 @implementation KingdomDetailViewController
 
+# pragma mark Data fetch
+// Fetch data from KingdomDetail model
 - (void)loadData
 {
     //NSLog(@"passedKingdomId:%lu",(unsigned long)self.passedKingdomId);
@@ -37,6 +39,7 @@
 
 }
 
+// Setup the basic UI content in the view based on fetched data
 - (void)setDataWithRetrievedArray:(NSArray *)retrievedArray
 {
     self.kingdomDetail = (KingdomDetail *)[self.detailArray objectAtIndex:0];
@@ -46,6 +49,7 @@
     self.climateLabel.text = [NSString stringWithFormat:@"%@",self.kingdomDetail.kingdomClimate];
 }
 
+#pragma mark Load view
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -54,6 +58,7 @@
     [self loadData];
 }
 
+// Prepare for the basic UI, quest board is not included
 - (void)prepareForUIElements
 {
     self.populationLabel.lineBreakMode = NSLineBreakByCharWrapping;
@@ -67,6 +72,9 @@
     [self.navigationController.navigationBar setTintColor:[UIColor whiteColor]];
 }
 
+# pragma mark Questboard setup
+// Prepare for the quest board. I used UIScrollView+PageControl to display several quests in one board
+// I allowed the ScrollView to enable both horizontally scroll and vertically scroll. Horizontally scroll is for switching between quests. Vertically scroll is for: a. Fit different screen sizes, so that all of the quests info can be presented completely no matter on iPhone 4S or iPhone 6 Plus. b. Leave some room to add more features on quest board.
 - (void)prepareForQuestBoard
 {
     CGSize scrollViewSize = CGSizeMake(self.questScrollView.frame.size.width * [self.kingdomDetail.questName count], self.questScrollView.frame.size.height+SCROLLVIEWLAYOUT_FLEXIBLEHEIGHT);
@@ -111,7 +119,7 @@
     }
 }
 
-
+// ScrollView delegation method implementation
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat pageWidth = scrollView.frame.size.width;

@@ -112,16 +112,6 @@ static NSString * const POSTURL = @"https://challenge2015.myriadapps.com/api/v1/
     [app saveContext];
 }
 
-/*
-// Show list view
-- (void)showKingdomListTableView
-{
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    KingdomListTableViewController *kingdomListTableViewController = [storyboard instantiateViewControllerWithIdentifier:@"kingdomListTableViewController"];
-    [kingdomListTableViewController setModalPresentationStyle:UIModalPresentationFullScreen];
-    [self presentViewController:kingdomListTableViewController animated:YES completion:NULL];
-}
-*/
 
 
 @end

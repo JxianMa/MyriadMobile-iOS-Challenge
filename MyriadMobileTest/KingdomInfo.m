@@ -30,6 +30,7 @@ static NSString *const KINGDOMINFOURL = @"https://challenge2015.myriadapps.com/a
     return self;
 }
 
+// Convert fetched URL stirng in JSON to NSURL
 - (NSURL *)kingdomImageURL {
     return [NSURL URLWithString:self.imageURLString];
 }
