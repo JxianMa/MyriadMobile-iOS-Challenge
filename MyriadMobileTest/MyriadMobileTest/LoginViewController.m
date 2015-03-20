@@ -100,6 +100,7 @@ static NSString * const POSTURL = @"https://challenge2015.myriadapps.com/api/v1/
     NSString *responseString = [NSString stringWithFormat:@"%@",responseDict];
     UIAlertView *connectionCheckView = [[UIAlertView alloc] initWithTitle:@"Login Success!" message:responseString delegate:nil cancelButtonTitle:@"Done" otherButtonTitles:nil, nil];
     [connectionCheckView show];
+    NSLog(@"Log in success, User information stored.");
 }
 
 // Store user info to local database
